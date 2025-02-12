@@ -1,0 +1,87 @@
+<div class="title">
+  <h1>ViaCep Autocomplete</h1>
+</div>
+<form [formGroup]="formulario" (ngSubmit)="submit()" >
+  <div class="row mt-4 ms-2 me-2 mt-1">
+    <div class="col-md-3">
+      <label for="cep">CEP</label>
+      <input type="text" placeholder="EX: 99999999" class="form-control" formControlName="cep">
+    </div>
+
+    <div class="col-md-3">
+      <label for="logradouro">Logradouro</label>
+      <input type="text" placeholder="EX: Rua sem saída" class="form-control">
+    </div>
+
+    <div class="col-md-3">
+      <label for="complemento">Complemento</label>
+      <input type="text" placeholder="EX: Lado ímpar" class="form-control">
+    </div>
+
+    <div class="col-md-3">
+      <label for="numero">Número</label>
+      <input type="text" placeholder="EX: 06" class="form-control">
+    </div>
+
+    <div class="col-md-3">
+      <label for="bairro">Bairro</label>
+      <input type="text" placeholder="Ex: Bairro novo" class="form-control">
+    </div>
+
+
+    <div class="col-md-3">
+      <label for="uf">UF</label>
+      <input type="text" placeholder="Ex: AM" class="form-control">
+    </div>
+
+    <div class="col-md-3">
+    <label for="estado">Estado:</label>
+    <select id="estado" name="estado" class="form-select ">
+      <option value="">Selecione...</option>
+      <option value="AC">Acre (AC)</option>
+      <option value="AL">Alagoas (AL)</option>
+      <option value="AP">Amapá (AP)</option>
+      <option value="AM">Amazonas (AM)</option>
+      <option value="BA">Bahia (BA)</option>
+      <option value="CE">Ceará (CE)</option>
+      <option value="DF">Distrito Federal (DF)</option>
+      <option value="ES">Espírito Santo (ES)</option>
+      <option value="GO">Goiás (GO)</option>
+      <option value="MA">Maranhão (MA)</option>
+      <option value="MT">Mato Grosso (MT)</option>
+      <option value="MS">Mato Grosso do Sul (MS)</option>
+      <option value="MG">Minas Gerais (MG)</option>
+      <option value="PA">Pará (PA)</option>
+      <option value="PB">Paraíba (PB)</option>
+      <option value="PR">Paraná (PR)</option>
+      <option value="PE">Pernambuco (PE)</option>
+      <option value="PI">Piauí (PI)</option>
+      <option value="RJ">Rio de Janeiro (RJ)</option>
+      <option value="RN">Rio Grande do Norte (RN)</option>
+      <option value="RS">Rio Grande do Sul (RS)</option>
+      <option value="RO">Rondônia (RO)</option>
+      <option value="RR">Roraima (RR)</option>
+      <option value="SC">Santa Catarina (SC)</option>
+      <option value="SP">São Paulo (SP)</option>
+      <option value="SE">Sergipe (SE)</option>
+      <option value="TO">Tocantins (TO)</option>
+    </select>
+
+  </div>
+    <div class="col-md-3">
+      <label for="cidade">Cidade</label>
+      <input type="text" placeholder="Ex: Manaus" class="form-control">
+    </div>
+
+    <div class="col-md-3">
+      <label for="regiao">Região</label>
+      <input type="text" placeholder="Ex: Norte" class="form-control">
+    </div>
+
+
+  </div>
+  <div class="row mt-4 ms-3 mt-1">
+      <button type="submit" class="btn btn-primary col-md-1">Salvar</button>
+      <button type="reset" class="btn btn-secondary ms-2 col-md-1">Limpar</button>
+    </div>
+</form>

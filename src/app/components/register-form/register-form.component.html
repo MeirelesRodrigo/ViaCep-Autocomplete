@@ -2,41 +2,41 @@
   <h1>ViaCep Autocomplete</h1>
 </div>
 <form [formGroup]="formulario" (ngSubmit)="submit()" >
+
   <div class="row mt-4 ms-2 me-2 mt-1">
     <div class="col-md-3">
       <label for="cep">CEP</label>
-      <input type="text" placeholder="EX: 99999999" class="form-control" formControlName="cep">
+      <input type="text" placeholder="EX: 99999999" class="form-control" formControlName="cep" (blur)="consultaCep($event, formulario)" maxlength="8">
+      <div *ngIf="formulario.get('cep')?.touched && formulario.get('cep')?.hasError">
+        <span class="error-msg" *ngIf="formulario.get('cep')?.errors?.['required']">Campo obrigatório</span>
+        <span class="error-msg" *ngIf="formulario.get('cep')?.errors?.['pattern']">Cep inválido</span>
+      </div>
     </div>
 
     <div class="col-md-3">
       <label for="logradouro">Logradouro</label>
-      <input type="text" placeholder="EX: Rua sem saída" class="form-control">
+      <input type="text" placeholder="EX: Rua sem saída" class="form-control" formControlName="logradouro" >
     </div>
 
     <div class="col-md-3">
       <label for="complemento">Complemento</label>
-      <input type="text" placeholder="EX: Lado ímpar" class="form-control">
+      <input type="text" placeholder="EX: Lado ímpar" class="form-control"  formControlName="complemento">
     </div>
 
     <div class="col-md-3">
       <label for="numero">Número</label>
-      <input type="text" placeholder="EX: 06" class="form-control">
+      <input type="text" placeholder="EX: 06" class="form-control" formControlName="numero">
     </div>
 
     <div class="col-md-3">
       <label for="bairro">Bairro</label>
-      <input type="text" placeholder="Ex: Bairro novo" class="form-control">
+      <input type="text" placeholder="Ex: Bairro novo" class="form-control" formControlName="bairro">
     </div>
 
-
-    <div class="col-md-3">
-      <label for="uf">UF</label>
-      <input type="text" placeholder="Ex: AM" class="form-control">
-    </div>
 
     <div class="col-md-3">
     <label for="estado">Estado:</label>
-    <select id="estado" name="estado" class="form-select ">
+    <select id="estado" name="estado" class="form-select" formControlName="estado">
       <option value="">Selecione...</option>
       <option value="AC">Acre (AC)</option>
       <option value="AL">Alagoas (AL)</option>
@@ -66,22 +66,21 @@
       <option value="SE">Sergipe (SE)</option>
       <option value="TO">Tocantins (TO)</option>
     </select>
-
   </div>
+
     <div class="col-md-3">
       <label for="cidade">Cidade</label>
-      <input type="text" placeholder="Ex: Manaus" class="form-control">
+      <input type="text" placeholder="Ex: Manaus" class="form-control" formControlName="cidade">
     </div>
 
     <div class="col-md-3">
       <label for="regiao">Região</label>
-      <input type="text" placeholder="Ex: Norte" class="form-control">
+      <input type="text" placeholder="Ex: Norte" class="form-control" formControlName="regiao">
     </div>
-
 
   </div>
   <div class="row mt-4 ms-3 mt-1">
-      <button type="submit" class="btn btn-primary col-md-1">Salvar</button>
+      <button [disabled]="this.formulario.invalid" type="submit" class="btn btn-primary col-md-1">Salvar</button>
       <button type="reset" class="btn btn-secondary ms-2 col-md-1">Limpar</button>
     </div>
 </form>

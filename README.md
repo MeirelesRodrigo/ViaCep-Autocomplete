@@ -1,60 +1,72 @@
-# ViaCepAutocomplete
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+# ViaCep Autocomplete
 
-## Development server
+📌 Sobre o Projeto
+- ViaCep Autocomplete é uma aplicação Angular que preenche automaticamente formulários de endereço ao inserir um CEP válido. Integrado à API ViaCEP, o sistema busca e completa os campos de logradouro, bairro, cidade, estado e região, tornando o cadastro mais rápido e preciso.
+---
 
-To start a local development server, run:
+## 🚀 Funcionalidades
 
-```bash
+- 🔹 **Autopreenchimento inteligente** ao inserir um CEP válido.
+    
+- 🔹 **Validação de CEP** para garantir dados corretos.
+    
+- 🔹 **Consumo de API ViaCEP** para obter informações atualizadas.
+    
+- 🔹 **Formulário reativo** utilizando Angular Reactive Forms.
+    
+- 🔹 **Interface intuitiva e responsiva**.
+    
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- **Angular 19**
+    
+- **TypeScript**
+    
+- **Reactive Forms**
+    
+- **Bootstrap / SCSS**
+    
+- **API ViaCEP** (https://viacep.com.br/)
+    
+
+---
+
+## 📖 Como Executar o Projeto
+
+### 1️⃣ Clone o Repositório
+
+```
+git clone https://github.com/seu-usuario/via-cep-autocomplete.git
+cd via-cep-autocomplete
+```
+
+### 2️⃣ Instale as Dependências
+
+```
+npm install
+```
+
+### 3️⃣ Execute a Aplicação
+
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse no navegador: `http://localhost:4200/`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🎯 Como Funciona
+![Demonstração](demonstracao.gif)
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# ViaCep-Autocomplete
+1. Digite um **CEP válido** no campo correspondente.
+    
+2. O sistema consulta automaticamente a **API ViaCEP**.
+    
+3. Os campos de endereço são **preenchidos automaticamente**.
+    
+4. Revise os dados e conclua o cadastro.
